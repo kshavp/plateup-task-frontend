@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 1.25rem 3rem;
+  border-bottom: 2px solid rgba(183, 183, 183, 0.571);
+  z-index: 10;
+  position: relative;
+  background-color: white;
+}
+
+.nav-elements {
+  display: flex;
+  column-gap: 1vw;
+  list-style-type: none;
+  color: gray;
+}
+
+.navbar ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 1vw;
+  position: relative;
+}
+
+.login-box{
+    background: white;
+    box-shadow: 10px 5px 10px 5px gainsboro;
+    padding: 0.5rem;
+    border-radius:5px;
+    position: absolute;
+    right: 3vw;
+    top: 9vh;
+}
+
+.login-box p,a{
+    margin-right: 1.5vw;
+}
+
+
+.login-box .role{
+    padding: 0.25rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+hr{
+  opacity: 0.5;
+  margin: 0.5rem;
+}
+
+.login-box .role p{
+  color: black;
+}
