@@ -1,19 +1,61 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items:center;
-  padding: 1.25rem 3rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
   border-bottom: 2px solid rgba(183, 183, 183, 0.571);
   z-index: 10;
   position: relative;
   background-color: white;
 }
 
-.nav-elements {
+.navbar img{
+  position: static;
+}
+
+.nav-elements-desk {
   display: flex;
   column-gap: 1vw;
   list-style-type: none;
   color: gray;
+}
+.ham-btn{
+  display: none;
+  column-gap: 1vw;
+  list-style-type: none;
+  border: none;
+  font-size: 1.25rem;
+  background-color: transparent;
+  position: static;
+  /* right: 100%; */
+  /* top: 50%; */
+  z-index: 10;
+}
+
+.nav-elements-mobile {
+  display: none;
+  column-gap: 1vw;
+  list-style-type: none;
+  border: none;
+  font-size: 1.25rem;
+  background-color: transparent;
+  position: fixed;
+  right: 5%;
+  top: 3%;
+  z-index: 10;
+}
+
+.nav-elements-mobile {
+  display: none;
+  column-gap: 1vw;
+  list-style-type: none;
+  border: none;
+  font-size: 1.25rem;
+  background-color: transparent;
+  position: fixed;
+  right: 5%;
+  top: 3%;
+  z-index: 10;
 }
 
 .navbar ul li:not(:last-child)::after {
@@ -22,33 +64,62 @@
   position: relative;
 }
 
-.login-box{
-    background: white;
-    box-shadow: 10px 5px 10px 5px gainsboro;
-    padding: 0.5rem;
-    border-radius:5px;
-    position: absolute;
-    right: 3vw;
-    top: 9vh;
-}
-
-.login-box p,a{
-    margin-right: 1.5vw;
-}
-
-
-.login-box .role{
-    padding: 0.25rem;
+@media only screen and (max-width: 600px) {
+  .navbar {
     display: flex;
-    justify-content: end;
-    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-elements-desk {
+    display: none;
+  }
+  .navbar{
+    position: sticky;
+    width: 100%;
+  }
+  .ham-btn{
+    display: block;
+  }
+  .navbar ul li:not(:last-child)::after {
+    content: "";
+    margin-left: 1vw;
+    position: relative;
+  }
 }
 
-hr{
+.sidebar {
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  position: relative;
+}
+
+.login-box {
+  background: white;
+  box-shadow: 10px 5px 10px 5px gainsboro;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: absolute;
+  right: 3vw;
+  top: 9vh;
+}
+
+.login-box p,
+a {
+  margin-right: 1.5vw;
+}
+
+.login-box .role {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+hr {
   opacity: 0.5;
   margin: 0.5rem;
 }
 
-.login-box .role p{
+.login-box .role p {
   color: black;
 }

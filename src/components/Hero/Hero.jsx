@@ -3,11 +3,13 @@ import "./Hero.css";
 import ImageSection from "./ImageSection";
 import SixPillars from "./SixPillars";
 import CardSection from "./CardSection";
+import Form from "./Form";
 
 const Hero = () => {
   return (
     <div className="">
       <div className="container">
+      <Form />
         <ImageSection />
         <div className="heading">
           <h1>
